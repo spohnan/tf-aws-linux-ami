@@ -1,15 +1,16 @@
 data "aws_ami" "ec2-linux" {
   most_recent = true
   filter {
-    name = "name"
+    name   = "name"
     values = ["amzn-ami-*-x86_64-gp2"]
   }
   filter {
-    name = "virtualization-type"
+    name   = "virtualization-type"
     values = ["hvm"]
   }
   filter {
-    name = "owner-alias"
+    name   = "owner-alias"
     values = ["amazon"]
   }
 }
+
